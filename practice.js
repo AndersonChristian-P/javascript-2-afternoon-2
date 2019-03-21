@@ -206,14 +206,8 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 function removeItem(myGroceryList, item) {
-  if (myGroceryList) {
-  } else {
-    myGroceryList = [];
-  }
-
-  if (item) {
-  } else {
-    myGroceryList = [];
+  if (!myGroceryList || !item) {
+    return []
   }
 
   for (let i = 0; i < myGroceryList.length; i++) {
@@ -227,18 +221,14 @@ function removeItem(myGroceryList, item) {
 
 
 function addItem(myGroceryList, item) {
-  if (myGroceryList) {
-  } else {
-    addItem = [];
-  }
-
-  if (item) {
-  } else {
-    addItem = [];
+  if (!myGroceryList || !item) {
+    return []
   }
 
   myGroceryList.push(item)
   return myGroceryList
+
+
 }
 
 
@@ -405,8 +395,6 @@ devMountainEmployees.forEach(function (name, i) {
   }
 })
 
-console.log(devMountainEmployees)
-
 
 
 
@@ -468,8 +456,13 @@ console.log(users)
   Once you find the particular index he's located in, delete him from the array.
 */
 
-//Code Here
+users.forEach(function (email, i) {
+  if (users[i]['email'] === 'tylermcginnis33@gmail.com') {
+    users.splice(i, 1)
+  }
+})
 
+console.log(users)
 
 
 /*
