@@ -376,6 +376,7 @@ var colt = {
 */
 
 devMountainEmployees.push(tyler, cahlan, ryan, colt)
+console.log(devMountainEmployees.length)
 
 
 
@@ -387,22 +388,26 @@ devMountainEmployees.push(tyler, cahlan, ryan, colt)
 
 console.log(devMountainEmployees)
 
-function remove(devMountainEmployees) {
-  for (let i = 0; i < devMountainEmployees.length; i++) {
-
-  }
-}
 
 
-
-// function remove(devMountainEmployees) {
-//   for (let i = 0; i < devMountainEmployees.length; i++) {
-//     if (devMountainEmployees[i]['name'] = 'Cahlan') {
-//       devMountainEmployees.splice(i, 1)
+// function deleteUser(array, property, value) {
+//   for (var i = 0; i < array.length; i++) {
+//     if (array[i][property] === value) {
+//       array.splice(array[i], 1)
 //     }
 //   }
-//   console.log(devMountainEmployees)
-// }
+
+
+
+devMountainEmployees.forEach(function (name, i) {
+  if (devMountainEmployees[i]['name'] === 'Cahlan') {
+    devMountainEmployees.splice(i, 1)
+  }
+})
+
+console.log(devMountainEmployees)
+
+
 
 
 
@@ -414,13 +419,13 @@ function remove(devMountainEmployees) {
   Create an empty array called users.
 */
 
-//Code Here
+let users = []
 
 
 
 /*
   Now add three user objects to your users array. Each user object should contain the following properties. name, email, password, username.
-
+ 
   Include the following user1 object as one of the objects in your array.
 */
 
@@ -433,7 +438,23 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+var user2 = {
+  name: 'Christian Anderson',
+  email: 'ascacs@gmail.com',
+  password: 'sdvdv',
+  username: 'advdavadv'
+}
+
+var user3 = {
+  name: 'Eric C',
+  email: 'iou@gmail.com',
+  password: '098uh',
+  username: '23fdwv'
+}
+
+users.push(user1, user2, user3)
+
+console.log(users)
 
 
 
