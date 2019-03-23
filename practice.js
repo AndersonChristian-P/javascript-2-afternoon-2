@@ -171,7 +171,7 @@ console.log(getRandomArbitrary())
 
 function finder(arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === getRandomArbitrary()) {
+    if (arr[i] === getRandomArbitrary()) {  // you run this code so when you get a match you stop the loop, if you don't you could get multiple matches
       return true
     }
   }
